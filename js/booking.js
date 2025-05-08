@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
       try {
         // Send email to hotel
-        await emailjs.send("service_id", "template_id", {
+        await emailjs.send("service_bz8b749", "template_za0g0my", {
           to_email: "karthik.madireddy@gmail.com",
           from_name: document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value,
           from_email: document.getElementById('email').value,
@@ -124,13 +124,13 @@ document.addEventListener('DOMContentLoaded', function() {
           special_requests: document.getElementById('specialRequests').value
         });
 
-        // Send confirmation email to guest
-        await emailjs.send("service_id", "template_confirmation_id", {
-          to_email: document.getElementById('email').value,
-          guest_name: document.getElementById('firstName').value
-        });
+        // // Send confirmation email to guest
+        // await emailjs.send("service_bz8b749", "template_confirmation_id", {
+        //   to_email: document.getElementById('email').value,
+        //   guest_name: document.getElementById('firstName').value
+        // });
 
-        alert('Thank you for your booking! A confirmation email has been sent to your email address.');
+        alert('Thank you for choosing us! We will get back to you soon.');
         bookingForm.reset();
         
         document.getElementById('summaryRoom').textContent = '--';
@@ -142,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('summaryTaxes').textContent = '--';
         document.getElementById('summaryTotal').textContent = '--';
       } catch (error) {
+        console.error("EmailJS Error:", error);
         alert('There was an error processing your booking. Please try again.');
       } finally {
         submitButton.innerHTML = 'Book Now';
