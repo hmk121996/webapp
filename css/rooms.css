@@ -1,0 +1,398 @@
+/* Rooms Page Styles */
+
+/* ── Page Banner ── */
+.page-banner {
+  height: 44rem;
+  background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.4)), url('../img/roombanner.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.banner-content h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5.6rem;
+  font-weight: 300;
+  color: white;
+  margin-bottom: var(--space-2);
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+
+.breadcrumbs {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  opacity: 0.8;
+}
+
+.breadcrumbs a { color: white; }
+.breadcrumbs a:hover { opacity: 1; }
+.breadcrumbs span { margin: 0 0.8rem; }
+
+/* ── Room Filters ── */
+.room-filters {
+  padding-top: var(--space-4);
+  padding-bottom: var(--space-3);
+}
+
+/* remove top padding from the list so it sits tight under the tabs */
+.rooms-list {
+  padding-top: var(--space-2);
+}
+
+.filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-1);
+  margin-bottom: var(--space-5);
+}
+
+.filter-tab {
+  padding: 1rem 2.4rem;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--text-light);
+}
+
+.filter-tab:hover {
+  border-color: var(--dark-color);
+  color: var(--dark-color);
+}
+
+.filter-tab.active {
+  background-color: var(--dark-color);
+  color: white;
+  border-color: var(--dark-color);
+}
+
+/* ── Rooms Grid ── */
+.rooms-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+}
+
+.room-item {
+  background-color: white;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  transition: box-shadow 0.3s ease;
+}
+
+.room-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.room-images {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.room-gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.main-image {
+  height: 32rem;
+  overflow: hidden;
+}
+
+.main-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.main-image:hover img {
+  transform: scale(1.04);
+}
+
+/* ── thumbnail strip ── */
+.gallery-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.gallery-prev,
+.gallery-next {
+  flex-shrink: 0;
+  width: 3.2rem;
+  height: 6rem;
+  background: white;
+  border: 1px solid var(--border-color);
+  color: var(--text-light);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.gallery-prev:hover,
+.gallery-next:hover {
+  border-color: var(--dark-color);
+  color: var(--dark-color);
+}
+
+.thumbnail-images {
+  display: flex;
+  gap: 0.8rem;
+  overflow-x: auto;
+  flex: 1;
+  scrollbar-width: none;
+}
+
+.thumbnail-images::-webkit-scrollbar {
+  display: none;
+}
+
+.thumbnail-images .thumbnail {
+  width: 9rem;
+  height: 6rem;
+  object-fit: cover;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 2px solid transparent;
+  opacity: 0.65;
+  transition: border-color 0.2s ease, opacity 0.2s ease;
+}
+
+.thumbnail-images .thumbnail:hover,
+.thumbnail-images .thumbnail.active {
+  border-color: var(--primary-color);
+  opacity: 1;
+}
+
+.room-details {
+  padding: var(--space-4);
+}
+
+.room-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: var(--space-3);
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.room-heading h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: var(--dark-color);
+}
+
+.room-price {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: var(--dark-color);
+}
+
+.room-price span {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: var(--text-light);
+}
+
+.room-description p {
+  font-size: 1.55rem;
+  font-weight: 300;
+  margin-bottom: var(--space-2);
+  line-height: 1.85;
+  color: var(--text-light);
+}
+
+.room-features {
+  margin: var(--space-4) 0;
+}
+
+.room-features h3 {
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: var(--space-2);
+}
+
+.features-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.2rem var(--space-3);
+}
+
+.features-list li {
+  display: flex;
+  align-items: center;
+  font-size: 1.45rem;
+  font-weight: 300;
+  color: var(--text-light);
+}
+
+.features-list li i {
+  color: var(--primary-color);
+  margin-right: var(--space-1);
+  width: 1.8rem;
+}
+
+.room-booking {
+  display: flex;
+  gap: var(--space-2);
+  flex-wrap: wrap;
+  margin-top: var(--space-3);
+}
+
+/* ── Amenities ── */
+.amenities-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+.amenity-category {
+  background-color: white;
+  padding: var(--space-3);
+  border: 1px solid var(--border-color);
+}
+
+.amenity-category h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: var(--space-2);
+  color: var(--dark-color);
+  display: flex;
+  align-items: center;
+}
+
+.amenity-category h3 i {
+  margin-right: var(--space-1);
+  color: var(--primary-color);
+  font-size: 1.6rem;
+}
+
+.amenity-category ul li {
+  margin-bottom: 0.8rem;
+  padding-left: var(--space-2);
+  position: relative;
+  font-size: 1.45rem;
+  font-weight: 300;
+  color: var(--text-light);
+}
+
+.amenity-category ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+  font-size: 1rem;
+}
+
+/* ── Room Policies ── */
+.policies-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-3);
+}
+
+.policy-item {
+  text-align: center;
+  padding: var(--space-4) var(--space-3);
+  background-color: white;
+  border: 1px solid var(--border-color);
+  transition: box-shadow 0.3s ease;
+}
+
+.policy-item:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.policy-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.6rem;
+  height: 5.6rem;
+  border: 1px solid var(--border-color);
+  margin-bottom: var(--space-3);
+}
+
+.policy-icon i {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.policy-item h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: var(--space-2);
+}
+
+.policy-item p {
+  color: var(--text-light);
+  font-size: 1.45rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/* ── Media Queries ── */
+@media (min-width: 768px) {
+  .room-item {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .amenities-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .policies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .features-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 992px) {
+  .amenities-grid,
+  .policies-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .features-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.room-item.hidden {
+  display: none;
+}

@@ -1,0 +1,211 @@
+/* Global Styles */
+:root {
+  /* Color Variables */
+  --primary-color: #8C7A6B;       /* Warm taupe */
+  --secondary-color: #1A1A1A;     /* Near black */
+  --accent-color: #C9B9A8;        /* Light warm accent */
+  --light-color: #FFFFFF;
+  --dark-color: #1A1A1A;
+  --text-color: #1A1A1A;
+  --text-light: #6B6B6B;
+  --bg-light: #F7F4EF;            /* Warm cream */
+  --bg-dark: #111111;
+  --border-color: #E5DDD6;
+
+  /* Shadow */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.1);
+
+  /* Border Radius */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+
+  /* Spacing (8px system) */
+  --space-1: 0.8rem;
+  --space-2: 1.6rem;
+  --space-3: 2.4rem;
+  --space-4: 3.2rem;
+  --space-5: 4.8rem;
+  --space-6: 6.4rem;
+  --space-7: 8rem;
+  --space-8: 10rem;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 120rem;
+  padding: 0 var(--space-3);
+  margin: 0 auto;
+}
+
+/* Section Padding */
+.section-padding {
+  padding: var(--space-7) 0;
+}
+
+@media (min-width: 768px) {
+  .section-padding {
+    padding: var(--space-8) 0;
+  }
+}
+
+/* Background Colors */
+.bg-light {
+  background-color: var(--bg-light);
+}
+
+.bg-dark {
+  background-color: var(--bg-dark);
+  color: var(--light-color);
+}
+
+/* Section Heading */
+.section-heading {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.section-heading .subheading {
+  display: block;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.35rem;
+  color: var(--primary-color);
+  margin-bottom: var(--space-2);
+}
+
+.section-heading h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4rem;
+  font-weight: 400;
+  color: var(--dark-color);
+  margin-bottom: 0;
+  line-height: 1.1;
+}
+
+.heading-divider {
+  display: none;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 1.3rem 3.2rem;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 0;
+}
+
+.btn-primary {
+  background-color: transparent;
+  color: var(--dark-color);
+  border: 1px solid var(--dark-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-color);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--dark-color);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  border-color: var(--dark-color);
+}
+
+.btn-light {
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgba(255,255,255,0.7);
+}
+
+.btn-light:hover {
+  background-color: white;
+  color: var(--dark-color);
+  border-color: white;
+}
+
+.btn-text {
+  color: var(--text-color);
+  position: relative;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 500;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--dark-color);
+  padding-bottom: 0.3rem;
+}
+
+.btn-text:hover {
+  color: var(--primary-color);
+  border-bottom-color: var(--primary-color);
+}
+
+.btn-text i {
+  margin-left: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.btn-text:hover i {
+  transform: translateX(4px);
+}
+
+/* Rounded Images */
+.rounded-image {
+  border-radius: 0;
+  overflow: hidden;
+}
+
+/* Animation Classes */
+.animate-slide-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: slideUp 0.8s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.2s;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Utility Classes */
+.text-center {
+  text-align: center;
+}
+
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
