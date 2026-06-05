@@ -310,14 +310,14 @@ const SITE = {
         enabled:  true
       },
       {
-        name:     "Jyotsna Negi",
+        name:     "Nitika Negi",
         position: "General Manager",
         bio:      "A Kinnaur native with over 5 years of hospitality experience, Jyotsna ensures every aspect of your stay exceeds expectations.",
         image:    "stonu.jpg",
         enabled:  true
       },
       {
-        name:     "Jyotsna Negi",
+        name:     "Stonuu",
         position: "General Manager",
         bio:      "A Kinnaur native with over 5 years of hospitality experience, Jyotsna ensures every aspect of your stay exceeds expectations.",
         image:    "stonu.jpg",
